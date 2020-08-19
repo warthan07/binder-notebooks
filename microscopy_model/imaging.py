@@ -195,7 +195,7 @@ def draw_imaging_setup(*,figsize):
     plt.rcParams['figure.figsize'] = figsize
     plt.ion()
 
-    fig = plt.figure(2)
+    fig = plt.figure(3)
     ax_sys = fig.add_subplot(121)
     ax_obj = fig.add_subplot(222)
     ax_im = fig.add_subplot(224)
