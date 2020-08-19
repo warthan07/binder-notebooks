@@ -188,7 +188,9 @@ class ImagingSetup:
         self.ax_lens.height = 3*u
         self.arr_R.update(self.x_lens-0.4, self.x_lens-0.4, 0, 1.45*u)
 
-        self.fig.canvas.draw_idle()
+        self.fig.canvas.draw()
+        self.fig.canvas.flush_events()
+        plt.show()
 
 
 def draw_imaging_setup(*,figsize):

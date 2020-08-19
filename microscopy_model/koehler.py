@@ -133,7 +133,9 @@ class KoehlerSetup:
             self.ray_bundles[i].update(cond_ap_opening,field_ap_opening)
         self.field_ap.update(field_ap_opening)
         self.cond_ap.update(cond_ap_opening)
-        self.fig.canvas.draw_idle()
+        self.fig.canvas.draw()
+        self.fig.canvas.flush_events()
+        plt.show()
 
 
 def draw_koehler_setup(*,figsize):

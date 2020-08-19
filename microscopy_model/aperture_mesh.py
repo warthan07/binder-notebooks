@@ -59,6 +59,8 @@ class ApertureMesh:
         self.ax_lines,self.ax_pts = self.ax.triplot(self.wavevectors[:,0],self.wavevectors[:,1],"ko-")
         self.arrow.update(-NA, NA, self.max_NA*1.2, self.max_NA*1.2)
         self.fig.canvas.draw()
+        self.fig.canvas.flush_events()
+        plt.show()
 
 def draw_aperture_mesh(*,figsize):
     plt.rcParams['figure.figsize'] = figsize
